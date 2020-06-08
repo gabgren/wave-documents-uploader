@@ -1,5 +1,6 @@
 # wave-documents-uploader
 A Chrome Extension that lets you upload and attach Receipts or Documents to a Transaction
+
 Demo: https://imgur.com/a/9i6Eq2g
 
 # Installation
