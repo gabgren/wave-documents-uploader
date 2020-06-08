@@ -1,0 +1,37 @@
+{
+  "name": "Wave Documents Uploader",
+  "version": "1.0",
+  "description": "A Chrome Extension for Wave that adds the ability to view and upload receipts linked to a transaction",
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage",
+    "clipboardRead"
+  ],
+  "options_page": "options.html",
+  "background": {
+    "scripts": [
+      "jquery-3.5.1.min.js",
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "page_action": {
+    "default_icon": "logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://next.waveapps.com/*",
+        "http://next.waveapps.com/*"
+      ],
+      "js": [
+        "jquery-3.5.1.min.js",
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+  "manifest_version": 2
+}
